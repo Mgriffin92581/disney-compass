@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where to Stay at Disney World: Compare Resort, Nearby, and Budget Hotels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7fb; --card:#ffffff; --ink:#1a2038; --muted:#5a6280; --line:#dde1ee;
+  --hero:#1a2350; --hero-ink:#fff; --gold:#f2b544; --gold-ink:#2a1e00; --teal:#1f8a80;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1226;--card:#181c38;--ink:#eef0fa;--muted:#a3a9c8;--line:#2a2f52;--hero:#141a44;--teal:#4fc4b8;}}
+:root[data-theme="dark"]{--bg:#0f1226;--card:#181c38;--ink:#eef0fa;--muted:#a3a9c8;--line:#2a2f52;--hero:#141a44;--teal:#4fc4b8;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",sans-serif;line-height:1.15;margin:0 0 .5em}
+a{color:var(--teal)}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{background:var(--hero);color:var(--hero-ink)}
+nav{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;justify-content:space-between;padding:16px 0}
+nav strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}
+nav a{color:var(--hero-ink);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{text-decoration:underline}
+.hero{padding:30px 0 56px}
+.hero h1{font-size:clamp(2rem,6vw,3.3rem);font-weight:800;max-width:16em;letter-spacing:-.02em}
+.hero p{max-width:36em;font-size:1.1rem;color:#d5d9f2;margin:0}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem "Nunito Sans",sans-serif;background:var(--gold);color:var(--gold-ink);padding:12px 20px;border-radius:999px;text-decoration:none}
+.btn:hover{filter:brightness(1.06)}
+main section{padding:48px 0 4px}
+main h2{font-size:clamp(1.5rem,4vw,2.1rem)}
+.lead{color:var(--muted);max-width:40em;margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.chip{font:600 .95rem "Nunito Sans",sans-serif;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:14px;padding:22px;display:flex;flex-direction:column}
+.card[hidden]{display:none}
+.card h3{font-size:1.25rem}
+.tag{font-size:.85rem;font-weight:700;color:var(--teal);margin-bottom:6px}
+.card p{margin:0 0 12px;color:var(--muted);font-size:.98rem}
+.card ul{margin:0 0 16px;padding-left:20px;font-size:.95rem}
+.card li{margin-bottom:4px}
+.card .btn{margin-top:auto;align-self:flex-start}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"Bricolage Grotesque",sans-serif}
+tr:last-child td{border-bottom:0}
+.tips{padding-left:20px;margin:0}
+.tips li{margin-bottom:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--muted);margin:10px 0 0}
+.notice{margin-top:48px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:10px;padding:16px 20px;font-size:.92rem;color:var(--muted)}
+footer{padding:28px 0 40px;font-size:.88rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <strong>Magic Kingdom Compass</strong>
+      <a href="#" id="homeLink">Back to home</a>
+    </nav>
+    <div class="hero">
+      <h1>Where to stay at Disney World</h1>
+      <p>Compare Disney-owned resorts, nearby suites, and budget hotels by what matters to your family: price, convenience, or space.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="picker">
+    <h2>Find your fit</h2>
+    <p class="lead">Pick what matters most and we will show the options that match.</p>
+    <div class="chips" role="group" aria-label="Filter by priority">
+      <button class="chip" data-f="all" aria-pressed="true">Show all</button>
+      <button class="chip" data-f="convenience" aria-pressed="false">Closest to the parks</button>
+      <button class="chip" data-f="value" aria-pressed="false">Lowest price</button>
+      <button class="chip" data-f="space" aria-pressed="false">Most space</button>
+    </div>
+    <p id="count" class="lead" aria-live="polite" style="margin-bottom:14px"></p>
+    <div class="grid" id="cards">
+      <article class="card" data-t="convenience">
+        <span class="tag">Closest to the parks</span><h3>Disney resort hotels</h3>
+        <p>Disney-owned hotels range from simple value resorts to luxury properties. Transport and theming are part of the draw.</p>
+        <ul><li>Good for: first trips and short stays</li><li>Trade-off: usually the highest nightly rate</li><li>Check the official site for current perks</li></ul>
+        <a class="btn" href="#" rel="noopener" data-affiliate="resort">Check resort rates</a>
+      </article>
+      <article class="card" data-t="space value">
+        <span class="tag">Best for families</span><h3>Suites and condo-style hotels</h3>
+        <p>Separate sleeping areas and often a kitchen, a few miles from the parks.</p>
+        <ul><li>Good for: groups of four or more</li><li>Trade-off: a short drive or shuttle each day</li><li>Save on meals with a kitchen</li></ul>
+        <a class="btn" href="#" rel="sponsored noopener" data-affiliate="suites">Compare suites</a>
+      </article>
+      <article class="card" data-t="space">
+        <span class="tag">Biggest space</span><h3>Vacation rental homes</h3>
+        <p>A whole house or villa with a pool, usually a longer drive from the parks.</p>
+        <ul><li>Good for: large groups and week-long stays</li><li>Trade-off: you handle more of the logistics</li><li>Read cancellation and fee terms closely</li></ul>
+        <a class="btn" href="#" rel="sponsored noopener" data-affiliate="rentals">Browse rentals</a>
+      </article>
+      <article class="card" data-t="value">
+        <span class="tag">Lowest price</span><h3>Budget hotels near the parks</h3>
+        <p>Basic rooms and free or low-cost parking, farther from the gates than the resorts.</p>
+        <ul><li>Good for: travelers who are in the parks all day</li><li>Trade-off: longer commute and fewer extras</li><li>Compare total cost including parking</li></ul>
+        <a class="btn" href="#" rel="sponsored noopener" data-affiliate="budget">See budget deals</a>
+      </article>
+      <article class="card" data-t="convenience value">
+        <span class="tag">Middle ground</span><h3>Hotels near Disney Springs</h3>
+        <p>A cluster of hotels close to a shopping and dining area, often cheaper than the resorts.</p>
+        <ul><li>Good for: a balance of price and location</li><li>Trade-off: no resort-hotel theming</li><li>Check shuttle options before booking</li></ul>
+        <a class="btn" href="#" rel="sponsored noopener" data-affiliate="springs">Compare nearby hotels</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="compare">
+    <h2>Side by side</h2>
+    <p class="lead">A quick comparison. Check live rates for exact prices.</p>
+    <div class="scroll" tabindex="0" role="region" aria-label="Comparison table">
+      <table>
+        <thead><tr><th>Option</th><th>Price level</th><th>Distance</th><th>Space</th></tr></thead>
+        <tbody>
+          <tr><td>Disney resort hotels</td><td>Highest</td><td>Closest</td><td>Standard rooms</td></tr>
+          <tr><td>Suites and condo-style</td><td>Mid to high</td><td>Short drive</td><td>More room, kitchens</td></tr>
+          <tr><td>Vacation rentals</td><td>Varies by group size</td><td>Longer drive</td><td>Most room</td></tr>
+          <tr><td>Budget hotels</td><td>Lowest</td><td>Short to long drive</td><td>Standard rooms</td></tr>
+          <tr><td>Near Disney Springs</td><td>Mid</td><td>Close</td><td>Standard rooms</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tips">
+    <h2>Booking tips</h2>
+    <ol class="tips">
+      <li>Compare the total trip cost, not the nightly rate. Parking, resort fees, and transport can change the math.</li>
+      <li>Choose a refundable rate when you can, then recheck prices closer to your dates.</li>
+      <li>Confirm what is included with your stay on the official Disney site, since perks change.</li>
+      <li>Read recent guest reviews for the exact property you are booking.</li>
+    </ol>
+  </section>
+
+  <section id="faq">
+    <h2>Quick answers</h2>
+    <details><summary>Is staying on Disney property worth it?</summary><p>It is worth it if convenience matters most to you. Staying nearby is often cheaper and gives you more room, so compare both for your dates.</p></details>
+    <details><summary>How far in advance should I book?</summary><p>Popular dates fill up. Booking a refundable rate early, then rechecking prices, is a common approach.</p></details>
+    <details><summary>Do I need a car?</summary><p>Not always. Disney resorts offer transport, while off-property stays may need a car or shuttle. Check each property's options.</p></details>
+  </section>
+
+  <p class="notice"><strong>Disclosure:</strong> Some links on this page are affiliate links. If you book through them, we may earn a commission at no extra cost to you. It never changes what we recommend.</p>
+</main>
+
+<footer class="wrap">
+  <p>Magic Kingdom Compass is an independent, unofficial fan site. It is not affiliated with, endorsed by, or sponsored by The Walt Disney Company. All trademarks belong to their owners.</p>
+  <p><a href="privacy.html">Privacy policy</a></p>
+</footer>
+
+<script>
+/* Paste your affiliate links here, one per button. Leave "" until approved. */
+var LINKS = { resort:"https://disneyworld.disney.go.com/resorts/", suites:"", rentals:"", budget:"", springs:"" };
+var HOME = "index.html";
+
+document.querySelectorAll("[data-affiliate]").forEach(function(a){
+  var u = LINKS[a.getAttribute("data-affiliate")];
+  if (u) { a.href = u; a.target = "_blank"; }
+});
+if (HOME) document.getElementById("homeLink").href = HOME;
+
+var chips = document.querySelectorAll(".chip");
+var cards = document.querySelectorAll("#cards .card");
+var count = document.getElementById("count");
+function apply(f){
+  var n = 0;
+  cards.forEach(function(c){
+    var show = f === "all" || c.getAttribute("data-t").split(" ").indexOf(f) > -1;
+    c.hidden = !show; if (show) n++;
+  });
+  chips.forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-f") === f ? "true" : "false"); });
+  count.textContent = n + (n === 1 ? " option matches" : " options match");
+}
+chips.forEach(function(b){ b.addEventListener("click", function(){ apply(b.getAttribute("data-f")); }); });
+apply("all");
+</script>
+</body>
+</html>
